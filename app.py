@@ -47,11 +47,11 @@ commodity_dict = {
 
 annual_rainfall = [29, 21, 37.5, 30.7, 52.6, 150, 299, 251.7, 179.2, 70.5, 39.8, 10.9]
 base = {
-    "Paddy": 1245.5,
-    "Arhar": 3200,
-    "Bajra": 1175,
-    "Barley": 980,
-    "Copra": 5100,
+    "Paddy": 1450,
+    "Arhar": 5552,
+    "Bajra": 1365,
+    "Barley": 1925,
+    "Copra": 6100,
     "Cotton": 3600,
     "Sesamum": 4200,
     "Gram": 2800,
@@ -329,7 +329,8 @@ def CurrentMonth(name):
             commodity = i
             break
     current_wpi = commodity.getPredictedValue([float(current_month), current_year, current_rainfall])
-    current_price = (base[name.capitalize()]*current_wpi)/100
+    #current_price = (base[name.capitalize()]*current_wpi)/100
+    current_price = base[name.capitalize()]
     return current_price
 
 def TwelveMonthsForecast(name):
