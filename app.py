@@ -472,8 +472,3 @@ if __name__ == "__main__":
     commodity_list.append(wheat)
 
     app.run()
-
-
-
-
-
